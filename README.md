@@ -1,6 +1,6 @@
 <h1>Sedona</h1>
 <p>
-  Домен: <a href="">not-ready-yet</a>
+  Домен: <a href="https://sedona-master-6w3nm9rnd.vercel.app/">not-ready-yet</a>
 </p>
 <p>Верстка сайта по методологии БЭМ.
 

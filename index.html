@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+          <nav class="main-menu" role="navigation">
+            <a href="#" class="main-menu__link">Информация</a>
+            <a href="#" class="main-menu__link">Фото и видео</a>
+            <a href="./index.html" class="main-menu__link nav-logo">
+              <img class="logo" src="img/logo.png" alt="Лого" width="67px" height="56px" />
+            </a>
+            <a href="#" class="main-menu__link">Карта штата</a>
+            <a href="./hotels.html" class="main-menu__link">Гостиницы</a>
+          </nav>
+        </div>
+      </header>
+      <div class="banner" role="banner">
+        <div class="container">
+          <div class="banner__image"></div>
+        </div>
+      </div>
+      <main class="content" role="main">
+        <div class="container">
+          <section class="content__description">
+            <h2 class="content__title">
+              Седона - небольшой городок в аризоне, который заслуживает большего
+            </h2>
+            <p class="content__subtitle">
+              взгляните на несколько причин, по которым седона круче гранд каньона!
+            </p>
+          </section>
+          <section class="features">
+            <div class="features__row features__row-type1">
+              <div class="card card-type-1">
+                <h3 class="card__title">Самостоятельный городок</h3>
+                <p class="card__subtitle">
+                  Седона не туристическое место, там жизнь идёт своим чередом
+                </p>
+              </div>
+              <div class="features__image features__image-image1"></div>
+            </div>
+            <div class="features__row features__row-type2">
+              <div class="card card-type-1">
+                <div class="card__sprite card__sprite-sprite1"></div>
+                <h3 class="card__title">Жильё</h3>
+                <p class="card__subtitle">Остановитесь в настоящем мотеле, аки актёр в кино!</p>
+              </div>
+              <div class="card card-type-1">
+                <div class="card__sprite card__sprite-sprite2"></div>
+                <h3 class="card__title">Еда</h3>
+                <p class="card__subtitle">Фирменный бургер придётся вам по вкусу!</p>
+              </div>
+              <div class="card card-type-1">
+                <div class="card__sprite card__sprite-sprite3"></div>
+                <h3 class="card__title">Сувениры</h3>
+                <p class="card__subtitle">Сувениры местного производства на память об отпуске!</p>
+              </div>
+            </div>
+            <div class="features__row features__row-type1">
+              <div class="features__image features__image-image2"></div>
+              <div class="card card-type-1">
+                <h3 class="card__title">Там есть мост дьявола</h3>
+                <p class="card__subtitle">И по нему можно даже пройтись! Если не зассышь</p>
+              </div>
+            </div>
+            <div class="features__row features__row-type1">
+              <div class="card card-type-2">
+                <h3 class="card__title">Небольшой размер</h3>
+                <p class="card__subtitle">Любая достопримечательность прямо под рукой</p>
+              </div>
+              <div class="card card-type-2">
+                <h3 class="card__title">Живописные пейзажи</h3>
+                <p class="card__subtitle">Всегда есть что посмотреть и пофоткать</p>
+              </div>
+              <div class="card card-type-2">
+                <h3 class="card__title">Всё еще мало туристов</h3>
+                <p class="card__subtitle">Это вам не гранд каньон, делайте что хотите</p>
+              </div>
+            </div>
+          </section>
+          <div class="container">
+            <section class="common">
+              <div class="common__header">
+                <h3 class="common__title">Интересно?</h3>
+                <p class="common__subtitle">Тогда срочно бронируйте гостиницу!</p>
+              </div>
+              <div class="common__sedona-map"></div>
+            </section>
+            <form action="" method="POST" class="search-form">
+              <div class="search-form__header">
+                <h2>Поиск гостиницы в седоне</h2>
+              </div>
+              <div class="search-form__params">
+                <label for="date-arrival" class="search-form__labels">Дата заезда:</label>
+                <input
+                  type="date"
+                  id="date-arrival"
+                  class="search-form__input search-form__input-date-arrival"
+                  required
+                />
+                <label for="date-departure" class="search-form__labels">Дата выезда:</label>
+                <input
+                  type="date"
+                  id="date-departure"
+                  class="search-form__input search-form__input-date-departure"
+                  required
+                />
+                <label
+                  for="adults-input"
+                  class="search-form__labels search-form__labels-adults-label"
+                  >Взрослые:</label
+                >
+                <button class="input-btn-qty" id="adults-minus">−</button>
+                <input
+                  id="adults-input"
+                  value="2"
+                  readonly
+                  class="search-form__input search-form__input-adults"
+                />
+                <button class="input-btn-qty" id="adults-plus">+</button>
+                <label for="kids-input" class="search-form__labels search-form__labels-kids-label"
+                  >Дети:</label
+                >
+                <button class="input-btn-qty input-btn-qty--disabled" id="kids-minus">−</button>
+                <input
+                  id="kids-input"
+                  value="0"
+                  readonly
+                  class="search-form__input search-form__input-kids"
+                />
+                <button class="input-btn-qty" id="kids-plus">+</button>
+                <input
+                  type="submit"
+                  id="search-button"
+                  value="Найти"
+                  class="search-form__input search-form__submit-btn"
+                />
+              </div>
+            </form>
+          </div>
+          <footer class="page-footer">
+            <div class="container">
+              <div class="flex-row">
+                <div class="page-footer__tag col-1-3">#Visitsedona</div>
+                <div class="page-footer__social col-1-3">
+                  <a href="#" class="page-footer__social-icons twitter-ico"></a>
+                  <a href="#" class="page-footer__social-icons youtube-ico"></a>
+                  <a href="#" class="page-footer__social-icons facebook-ico"></a>
+                </div>
+                <div class="page-footer__copyright col-1-3">
+                  <div class="flex-row">
+                    <span class="footer_copy">Site from</span>
+                    <a href="#" class="page-footer__icon copy-icon-a"></a>
+                    <span class="footer_copy">for</span>
+                    <a href="#" class="page-footer__icon copy-icon-academy"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

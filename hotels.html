@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="main-menu" role="navigation">
+                <a href="#" class="main-menu__link">Информация</a>
+                <a href="#" class="main-menu__link">Фото и видео</a>
+                <a href="./index.html" class="main-menu__link nav-logo">
+                    <img class="logo" src="img/logo.png" alt="Лого" width="67px" height="56px">
+                </a>
+                <a href="#" class="main-menu__link">Карта штата</a>
+                <a href="./hotels.html" class="main-menu__link">Гостиницы</a>
+            </nav>
+        </div>
+    </header> 
+    <main class="hotels" role="main">
+        <div class="container">
+            <div class="filter" role="filter">
+                <div class="filter__block filter__infra">
+                    <h3 class="filter__title">Инфраструктура</h3>
+                    <input type="checkbox" class="filter__checkbox" id="pool" checked>
+                    <label for="pool" class="filter__labels">Бассейн</label>
+                    <input type="checkbox" class="filter__checkbox" id="parking" checked>
+                    <label for="parking" class="filter__labels">Парковка</label>
+                    <input type="checkbox" class="filter__checkbox" id="wifi">
+                    <label for="wifi" class="filter__labels">Wi-Fi</label>
+                </div>
+                <div class="filter__block filter__house-type">
+                    <h3 class="filter__title">Тип жилья</h3>
+                    <input type="checkbox" class="filter__checkbox" id="hotel" checked>
+                    <label for="hotel" class="filter__labels">Гостиница</label>
+                    <input type="checkbox" class="filter__checkbox" id="motel" checked>
+                    <label for="motel" class="filter__labels">Мотель</label>
+                    <input type="checkbox" class="filter__checkbox" id="aparts">
+                    <label for="aparts" class="filter__labels">Апартаменты</label>
+                </div>
+                <div class="filter__block filter__price">
+                    <h3 class="filter__title">Стоимость в сутки (Р)</h3>
+                    <div class="filter__price-range">
+                        <div class="price-range__price-from">
+                            От <span id="output-from">500</span> 
+                        </div>
+                        <div class="price-range__price-to">
+                            До <span id="output-to">4000</span> 
+                        </div>
+                    </div>
+                    <div id="price-slider" class="slider ui-slider ">
+                        <span tabindex="0" class="ui-slider-handle"></span>
+                        <span tabindex="0" class="ui-slider-handle "></span>
+                    </div>
+                </div>
+            </div>
+            <div class="results">
+                <div class="sort">
+                    <div class="flex-row">
+                        <p class="sort__title">Найдено: 3</p>
+                        <div class="sort__params">Сортировка:
+                            <a href="#" class="sort__toggle" id="toggle-price">Цена</a>
+                            <a href="#" class="sort__toggle" id="toggle-type">Тип</a>
+                            <a href="#" class="sort__toggle" id="toggle-rating">Рейтинг</a>
+                        </div>
+                        <div class="sort__latches">
+                            <a href="#" class="sort__latch sort__latch-incr"></a>
+                            <a href="#" class="sort__latch sort__latch-decr"></a>
+                        </div>
+                    </div>
+                </div>
+                <article class="hotel">
+                    <img src="./img/hotels-amara.jpg" alt="Фото гостиницы Amara resort & spa">
+                    <div class="hotel__description">
+                        <div class="hotel__about">
+                                <h3 class="hotel__title">
+                                    <a href="#" class="hotel__link">Amara resort & spa</a>
+                                </h3>
+                            <p class="hotel__type">Гостиница</p>
+                            <p class="hotel__price">От 3000 р.</p>
+                        </div>
+                        <button class="hotel__info btn hotel__info-btn">Подробнее</button>
+                        <button class="hotel__book btn hotel__book-btn">Забронировать</button>
+                    </div>
+                    <div class="hotel__rating">
+                        <i class="hotel__star sprite-ico-star"></i>
+                        <i class="hotel__star sprite-ico-star"></i>
+                        <i class="hotel__star sprite-ico-star"></i>
+                        <i class="hotel__star sprite-ico-star"></i>
+                        <i class="hotel__star sprite-ico-star"></i>
+                        <p class="hotel__rating hotel__rating-figures">Рейтинг: 4,5</p>
+                    </div>
+                </article>
+                <article class="hotel">
+                    <img src="./img/hotels-desert.jpg" alt="Фото мотеля Desert qauil inn">
+                    <div class="hotel__description">
+                        <div class="hotel__about">
+                                <h3 class="hotel__title">
+                                    <a href="#" class="hotel__link">Desert qauil inn</a>
+                                </h3>
+                            <p class="hotel__type">Мотель</p>
+                            <p class="hotel__price">От 2500 р.</p>
+                        </div>
+                        <button class="hotel__info btn hotel__info-btn">Подробнее</button>
+                        <button class="hotel__book btn hotel__book-btn">Забронировать</button>
+                    </div>
+                    <div class="hotel__rating">
+                        <i class="hotel__star sprite-ico-star"></i>
+                        <i class="hotel__star sprite-ico-star"></i>
+                        <p class="hotel__rating hotel__rating-figures">Рейтинг: 2,2</p>
+                    </div>
+                </article>
+                <article class="hotel">
+                    <img src="./img/hotels-villas.jpg" alt="Фото апартоментов Villas at poco diablo">
+                    <div class="hotel__description">
+                        <div class="hotel__about">
+                                <h3 class="hotel__title">
+                                    <a href="#" class="hotel__link">Villas at poco diablo</a>
+                                </h3>
+                            <p class="hotel__type">Апартаменты</p>
+                            <p class="hotel__price">От 4500 р.</p>
+                        </div>
+                        <button class="hotel__info btn hotel__info-btn">Подробнее</button>
+                        <button class="hotel__book btn hotel__book-btn">Забронировать</button>
+                    </div>
+                    <div class="hotel__rating">
+                        <i class="hotel__star sprite-ico-star"></i>
+                        <i class="hotel__star sprite-ico-star"></i>
+                        <i class="hotel__star sprite-ico-star"></i>
+                        <i class="hotel__star sprite-ico-star"></i>
+                        <p class="hotel__rating hotel__rating-figures">Рейтинг: 3,9</p>
+                    </div>
+                </article>
+            </div>
+        </div> 
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="flex-row">
+                <div class="page-footer__tag col-1-3">#Visitsedona</div>
+                <div class="page-footer__social col-1-3">
+                    <a href="#" class="page-footer__social-icons twitter-ico"></a>
+                    <a href="#" class="page-footer__social-icons youtube-ico"></a>
+                    <a href="#" class="page-footer__social-icons facebook-ico"></a>
+                </div>
+                <div class="page-footer__copyright col-1-3">
+                    <div class="flex-row">
+                        <span class="footer_copy">Site from</span>
+                        <a href="#" class="page-footer__icon copy-icon-a"></a> 
+                        <span class="footer_copy">for</span>
+                        <a href="#" class="page-footer__icon copy-icon-academy"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://atuin.ru/demo/ui-slider/jquery.ui.touch-punch.min.js"></script>
+    <script>
+        $( function() {
+            $("#price-slider").slider({
+            range: true,
+            min: 0,
+            max: 4000,
+            values: [0, 3000],
+            slide: function(event, ui) {
+                $("#output-from").html(ui.values[0]);
+                $("#output-to").html(ui.values[1]);
+            }
+            });
+            $("#output-from").html($("#price-slider").slider("values", 0));
+            $("#output-to").html($("#price-slider").slider("values", 1 ));
+        } );
+    </script>
+</body>
+</html>
